@@ -11,9 +11,9 @@
 <nav>
 	{#each pages as p}
 		{#if p.path === $page.url.pathname}
-			<span class="active">{p.name}</span>
+			<p class="active"><a href={p.path}>{p.name}</a></p>
 		{:else}
-			<a href={p.path}>{p.name}</a>
+			<p><a href={p.path}>{p.name}</a></p>
 		{/if}
 	{/each}
 </nav>
@@ -25,7 +25,7 @@
 	}
 
 	a,
-	span {
+	p {
 		color: white;
 		background: #333;
 		padding: 0.5em 1em;
@@ -38,6 +38,6 @@
 	}
 
 	.active {
-		box-shadow: inset 0 -4px 0 red; /* 赤い下線を引く */
+		box-shadow: 0 4px 0 0 red; /* 赤い下線を引く */
 	}
 </style>

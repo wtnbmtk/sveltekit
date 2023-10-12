@@ -8,7 +8,7 @@
 		<div>
 			<h3>PROFILE</h3>
 			<div class="image">
-				<img alt="profile" src={profile} />
+				<img alt="profile" src={profile} loading="lazy" />
 			</div>
 			<div class="text">
 				<h3>モトキ</h3>

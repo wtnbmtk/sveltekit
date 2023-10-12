@@ -8,7 +8,7 @@
 	];
 </script>
 
-<nav>
+<nav id="global-nav">
 	{#each pages as p}
 		{#if p.path === $page.url.pathname}
 			<p class="active"><a href={p.path}>{p.name}</a></p>

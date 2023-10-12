@@ -1,30 +1,33 @@
 <script>
+	import '../app.css';
 	import Nav from '$lib/components/Nav.svelte';
-	import Modal from '$lib/components/Modal.svelte';
-	import { Hamburger } from 'svelte-hamburgers';
-	import Menu from '$lib/components/Menu.svelte';
+	import Dialog from '$lib/components//Dialog.svelte';
+
 	/**
-	 * @type {any}
+	 * @type {{ showModal: () => void; addEventListener: (arg0: string, arg1: (event: any) => void) => void; close: () => void; }}
 	 */
-	let open;
-	let showModal = false;
+	let dialog;
+
+	function openDialog() {
+		dialog.showModal();
+		dialog.addEventListener('click', function (event) {
+			if (event.target === dialog) {
+				dialog.close();
+			}
+		});
+	}
+
+	function closeDialog() {
+		dialog.close();
+	}
 </script>
 
-<Nav />
-<Hamburger bind:open --color="black" />
-<Menu bind:open />
+<header id="TopHeader">
+	<div id="mobile-head">
+		<button id="ToggleButton" class="btn" type="button" on:click={openDialog}>MENU</button>
+		<Dialog bind:dialog on:closeDialog={closeDialog} />
+	</div>
+	<Nav />
+</header>
 
-<button on:click={() => (showModal = true)} id="ToggleButton" class="btn" type="button"
-	>MODAL</button
->
-
-<Modal bind:showModal>
-	<nav slot="nav" id="global-nav">
-		<ul>
-			<li><a class="list-1" href="#summary">概要</a></li>
-			<li><a class="list-3" href="#profile">プロフィール</a></li>
-			<li><a class="list-4" href="#contact">お問い合わせ</a></li>
-		</ul>
-	</nav>
-</Modal>
 <slot />

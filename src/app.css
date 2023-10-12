@@ -46,26 +46,26 @@ picture {
 	max-width: 100%;
 }
 
+/* HEAD */
 #TopHeader {
 	container: header / inline-size;
-	position: absolute;
+	position: fixed;
 	top: -50px;
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
 	margin: 50px auto 0;
 	z-index: 999;
+	transition: 0.5s ease;
 }
 /* Fixed */
 #TopHeader.fixed {
-	position: fixed;
 	top: 0;
 	height: 50px;
 	line-height: 50px;
 	margin-top: 0;
 	padding-top: 0;
 	background-color: rgba(255, 255, 255, 0.8);
-	transition: top 0.5s ease-in-out;
 	backdrop-filter: blur(8px);
 }
 #mobile-head {
@@ -114,18 +114,299 @@ picture {
 #headerSNS a {
 	padding: 0 8px;
 }
-.open #global-nav,
-.open #headerSNS {
+
+/* MAIN */
+main {
+	container: main / inline-size;
+	background-color: white;
+	margin: 50px 0 0 0;
+}
+.contents {
+	margin: auto;
+	font-size: medium;
+}
+.contents::before {
+	content: ' ';
 	display: block;
-	position: relative;
+	visibility: hidden;
+}
+.contents p {
+	text-align: justify;
+}
+#TopView:before {
+	margin-top: -100px;
+	height: 100px;
+}
+#TopView {
+	background: linear-gradient(220.55deg, #a531dc 0%, #4300b1 100%);
+}
+.TopContents {
+	display: grid;
+	place-content: center;
+}
+.TopContents div {
+	display: grid;
+	place-content: center;
 	width: 100%;
-	inset: auto;
-	background-color: black;
+	height: 250px;
+	padding: 0 2rem;
+}
+.TopContents .text {
+	color: white;
+}
+.TopContents .text h2 {
+	margin-top: 0;
+}
+.TopContents .text a {
+	display: contents;
+}
+.image img {
+	margin: auto;
+}
+/* .TopContents .image {
+  background: url(images/bg3.png) center;
+} */
+.TopContents .image img {
+	max-width: 250px;
+}
+.contents:nth-child(n + 2)::before {
+	margin-top: -50px;
+	height: 50px;
+}
+.contents:nth-child(n + 2) {
+	padding: 0 1rem;
+}
+.contents:nth-child(n + 2) h2 {
 	text-align: center;
 }
-.open #global-nav ul li a,
-.open #headerSNS a {
+.contents:nth-child(n + 2) h3 {
+	text-align: center;
+}
+
+.DataGrid p {
+	margin-top: 0;
+}
+.DataGrid dl {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+	border-right: solid 1px black;
+	border-left: solid 1px black;
+	margin-bottom: 0;
+}
+.DataGrid dt {
+	border-top: solid 1px black;
+	background-color: blueviolet;
 	color: white;
+}
+.DataGrid dt:nth-of-type(4) {
+	border-bottom: solid 1px black;
+}
+.DataGrid dd {
+	margin: 0;
+	border-top: solid 1px black;
+	border-left: solid 1px black;
+	padding-left: 1rem;
+}
+.DataGrid dd:nth-of-type(7),
+.DataGrid dd:nth-of-type(8) {
+	border-bottom: solid 1px black;
+}
+.DataGrid span {
+	font-size: x-small;
+	vertical-align: top;
+}
+.DataGrid p {
+	font-size: small;
+	margin-bottom: 0;
+}
+.prices {
+	text-decoration: underline;
+	color: blue;
+}
+#profile .image img {
+	max-width: 80px;
+	border-radius: 50%;
+}
+#profile .text {
+	max-width: 400px;
+	margin: auto;
+}
+#profile .text h3 {
+	text-align: center;
+}
+#form h1 {
+	display: none;
+}
+.FormGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.gridGallery {
+	display: grid;
+	grid-gap: 1rem;
+	place-content: center;
+	grid-template-columns: 1fr 1fr;
+}
+.item {
+	display: block;
+	position: relative;
+	width: 130px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.item::before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+.item img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	object-fit: cover;
+	vertical-align: bottom;
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.item:hover img {
+	cursor: pointer;
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.lum-lightbox {
+	top: 50px;
+}
+#gMap {
+	display: block;
+	width: 100%;
+	height: 300px;
+}
+#content {
+	width: 100%;
+	height: 200px;
+}
+#spearly-list-body {
+	margin: 0;
+	padding: 0;
+}
+#spearly-list-body li {
+	margin: 1rem auto;
+}
+#spearly-list-body li:first-child {
+	margin-top: 0;
+}
+#spearly-list-body li:last-child {
+	margin-bottom: 0;
+}
+#spearly-list-body a {
+	display: block;
+	color: lavender;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	position: relative;
+	top: 0;
+}
+#spearly-list-body a:hover {
+	top: -5px;
+	transition: 0.3s ease-in-out;
+}
+#spearly-list-body a img {
+	width: 100%;
+	height: 130px;
+	object-fit: cover;
+}
+#spearly-list-body a .articleTextLink {
+	width: 100%;
+	height: 130px;
+	margin: 0;
+	padding: 1rem;
+}
+.articleTextLink h3,
+.articleTextLink p {
+	margin: 0;
+}
+.article-item-wrapper img {
+	display: block;
+	margin: 0 auto;
+	height: 260px;
+	object-fit: cover;
+}
+
+/* FOOTER*/
+footer {
+	container: footer / inline-size;
+}
+#under-nav {
+	padding: 0;
+	width: fit-content;
+	margin: 0 auto;
+}
+#under-nav li {
+	display: block;
+	width: 110px;
+	text-align: center;
+	margin: 8px auto;
+}
+footer #under-nav a {
+	position: relative;
+	display: block;
+	color: #333;
+	text-decoration: none;
+	outline: none;
+	overflow: hidden;
+	transition: all 0.5s;
+	height: 50px;
+	line-height: 50px;
+}
+footer #under-nav a::before,
+footer #under-nav a::after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s;
+}
+footer #under-nav a::before {
+	top: 0;
+	left: 0;
+	border-top: 2px solid #333;
+	border-left: 2px solid #333;
+}
+footer #under-nav a::after {
+	right: 0;
+	bottom: 0;
+	border-right: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+footer #under-nav .link1 a:hover {
+	background-color: #07b53b;
+	color: #fff;
+	transition: all 0.7s;
+}
+footer #under-nav .link2 a:hover {
+	background-color: #1d9bf0;
+	color: #fff;
+	transition: all 0.7s;
+}
+footer #under-nav .link3 a:hover {
+	background-color: #7215ec;
+	color: #fff;
+	transition: all 0.7s;
+}
+footer #under-nav a:hover::before,
+footer #under-nav a:hover::after {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	transition: all 0.7s;
 }
 
 @media screen and (min-width: 800px) {
@@ -157,12 +438,6 @@ picture {
 	#global-nav ul li {
 		display: inline-block;
 		padding: 0 1rem;
-	}
-	#global-nav ul li a {
-		color: white;
-	}
-	.fixed #global-nav ul li a {
-		color: black;
 	}
 	#headerSNS {
 		padding-right: 8px;
@@ -201,5 +476,26 @@ picture {
 	}
 	.gridGallery {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@container footer (min-width: 400px) {
+	.contents {
+		max-width: 400px;
+	}
+	#under-nav li {
+		display: inline-block;
+	}
+	#under-nav li:first-child {
+		margin-left: 0;
+	}
+	#under-nav li:last-child {
+		margin-right: 0;
+	}
+}
+
+@container footer (min-width: 800px) {
+	.contents {
+		max-width: 800px;
 	}
 }

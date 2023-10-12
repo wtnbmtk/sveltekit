@@ -4,8 +4,8 @@
 
 	const pages = [
 		{ name: 'Home', path: '/' },
-		{ name: 'About', path: '/about' },
-		{ name: 'Blog', path: '/blog' }
+		{ name: 'Profile', path: '/profile' },
+		{ name: 'Contact', path: '/contact' }
 	];
 
 	export let dialog; // （←ポイント） 要素をバインドすることで親側で表示・閉じるの制御が可能に
@@ -20,13 +20,15 @@
 	<div class="inner">
 		<h2>MENU</h2>
 		<nav>
-			{#each pages as p}
-				{#if p.path === $page.url.pathname}
-					<p class="active"><a href={p.path}>{p.name}</a></p>
-				{:else}
-					<p><a href={p.path}>{p.name}</a></p>
-				{/if}
-			{/each}
+			<ul>
+				{#each pages as a}
+					{#if a.path === $page.url.pathname}
+						<li class="active"><a href={a.path}>{a.name}</a></li>
+					{:else}
+						<li><a href={a.path}>{a.name}</a></li>
+					{/if}
+				{/each}
+			</ul>
 		</nav>
 		<button class="close" on:click={clickClose}>CLOSE</button>
 	</div>

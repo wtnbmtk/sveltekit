@@ -23,9 +23,9 @@
 			<ul>
 				{#each pages as a}
 					{#if a.path === $page.url.pathname}
-						<li class="active"><a href={a.path}>{a.name}</a></li>
+						<li class="active"><a href={a.path} on:click={clickClose}>{a.name}</a></li>
 					{:else}
-						<li><a href={a.path}>{a.name}</a></li>
+						<li><a href={a.path} on:click={clickClose}>{a.name}</a></li>
 					{/if}
 				{/each}
 			</ul>
@@ -51,7 +51,7 @@
 		text-decoration: underline;
 	}
 	.active {
-		background-color: red; /* 赤い下線を引く */
+		background-color: #ff5722; /* 赤い下線を引く */
 	}
 	.close {
 		display: block;

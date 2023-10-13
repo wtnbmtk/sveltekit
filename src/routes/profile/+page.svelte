@@ -1,5 +1,6 @@
 <script>
-	import profile from '$lib/assets/profile.jpeg';
+	import profile_webp from '$lib/assets/profile.webp';
+	import profile_jpg from '$lib/assets/profile.jpg';
 </script>
 
 <main>
@@ -8,7 +9,10 @@
 		<div>
 			<h3>PROFILE</h3>
 			<div class="image">
-				<img alt="profile" src={profile} loading="lazy" />
+				<picture>
+					<source srcset={profile_webp} type="image/webp" />
+					<img src={profile_jpg} alt="profile" />
+				</picture>
 			</div>
 			<div class="text">
 				<h3>モトキ</h3>

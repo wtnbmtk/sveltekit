@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import logo from '$lib/assets/logo1.svg';
+	import logo from '$lib/assets/logo1.webp';
 	import Nav from '$lib/components/Nav.svelte';
 	import Dialog from '$lib/components//Dialog.svelte';
 	import { onMount, onDestroy } from 'svelte';
@@ -46,3 +46,21 @@
 </header>
 
 <slot />
+
+<footer>
+	<section id="sns" class="contents">
+		<div>
+			<nav id="under-nav">
+				<ul>
+					<li class="link1">
+						<a href="https://lin.ee/VTOX579">LINE</a>
+					</li>
+					<li class="link2">
+						<a href="https://twitter.com/webdachi">𝕏</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<small class="copyright">© 2023 Webdachi</small>
+</footer>

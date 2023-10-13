@@ -1,6 +1,5 @@
 <script>
-	import logo from '$lib/assets/logo1.svg';
-	import profile from '$lib/assets/profile.jpeg';
+	import logo from '$lib/assets/logo1.webp';
 </script>
 
 <main>
@@ -18,7 +17,6 @@
 						src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
 						alt="友だち追加"
 						height="36"
-						border="0"
 					/></a
 				>
 			</div>
@@ -77,33 +75,6 @@
 			<p>*価格は全て税込価格です。</p>
 			<p>*1 Cloudflare PagesはCloudflare, Inc.が提供するホスティングサービスです。</p>
 			<p>*2 NewtはNewt株式会社が提供するCMSサービスです。</p>
-		</div>
-	</section>
-	<section id="profile" class="contents">
-		<div>
-			<h3>PROFILE</h3>
-			<div class="image">
-				<img alt="profile" src={profile} loading="lazy" />
-			</div>
-			<div class="text">
-				<h3>モトキ</h3>
-				<p>
-					東京工芸大学卒。同大学在学中にWeb開発のスキルを身に付け始める。現在では、HTML、CSS、JavaScriptをはじめ、Next.jsやGitなどのスキルを身に付け、効率的なWeb開発を得意としている。また、UI/UXデザインやSEOの知識を持っており、ユーザーが使いやすく、魅力的なWebサイト制作が行える。実績としては制作依頼を通して実践的なWeb開発の経験を積んでおり、ユーザーファーストな開発で評価されてきた。
-				</p>
-			</div>
-		</div>
-	</section>
-	<section id="contact" class="contents">
-		<div>
-			<h3>CONTACT</h3>
-			<!-- svelte-ignore a11y-missing-attribute -->
-			<iframe
-				id="form"
-				style="border: none; width: 100%"
-				height="691px"
-				src="https://www.noway-form.com/ja/f/9b90dc54-ca75-4bf9-83ea-cf7dfe43908b/embed"
-				loading="lazy"
-			/>
 		</div>
 	</section>
 </main>

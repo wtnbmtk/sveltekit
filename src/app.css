@@ -487,10 +487,10 @@ footer #under-nav a:hover::after {
 		padding: 0 2rem 0 4rem;
 	}
 	.TopContents .text h2 {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 	.TopContents .text p {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 	.TopContents .image {
 		place-content: center;

@@ -1,5 +1,5 @@
 <script>
-	import logo from '$lib/assets/logo1.webp';
+	import logo from '$lib/assets/logo1.svg';
 </script>
 
 <main>
@@ -21,7 +21,7 @@
 				>
 			</div>
 			<div class="image">
-				<img alt="logo" src={logo} />
+				<img src={logo} alt="logo" width="200" height="200" />
 			</div>
 		</div>
 	</section>

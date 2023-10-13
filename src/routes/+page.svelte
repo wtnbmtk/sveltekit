@@ -1,5 +1,6 @@
 <script>
-	import logo from '$lib/assets/logo1.svg';
+	import logo_webp from '$lib/assets/logo1.webp';
+	import logo_png from '$lib/assets/logo1.png';
 </script>
 
 <main>
@@ -12,16 +13,12 @@
 						ウェブダチは生産性を高めたWebクリエイティブで、サポートのリソースを増やしたサイト運営を行います。
 					</p>
 				</hgroup>
-				<a class="line" href="https://lin.ee/VTOX579"
-					><img
-						src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-						alt="友だち追加"
-						height="36"
-					/></a
-				>
 			</div>
 			<div class="image">
-				<img src={logo} alt="logo" width="200" height="200" />
+				<picture>
+					<source srcset={logo_webp} type="image/webp" />
+					<img src={logo_png} alt="logo" width="200" height="200" />
+				</picture>
 			</div>
 		</div>
 	</section>

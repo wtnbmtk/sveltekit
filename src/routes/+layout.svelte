@@ -1,9 +1,10 @@
 <script>
 	import '../app.css';
-	import logo from '$lib/assets/logo1.svg';
+	import logo_webp from '$lib/assets/logo1.webp';
+	import logo_png from '$lib/assets/logo1.png';
 	import Nav from '$lib/components/Nav.svelte';
 	import Dialog from '$lib/components//Dialog.svelte';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 
 	const scrollNavBar = 50;
 	let show = false;
@@ -38,7 +39,12 @@
 
 <header id="TopHeader" class:fixed={show}>
 	<div id="mobile-head">
-		<a class="brand" href="/"><img src={logo} alt="logo" width="100" height="100" /></a>
+		<a class="brand" href="/">
+			<picture>
+				<source srcset={logo_webp} type="image/webp" />
+				<img src={logo_png} alt="logo" width="100" height="100" />
+			</picture></a
+		>
 		<button id="ToggleButton" class="btn" type="button" on:click={openDialog}>MENU</button>
 		<Dialog bind:dialog on:closeDialog={closeDialog} />
 	</div>
@@ -46,7 +52,13 @@
 </header>
 
 <slot />
-
+<a class="line" href="https://lin.ee/VTOX579"
+	><img
+		src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+		alt="友だち追加"
+		height="36"
+	/></a
+>
 <footer>
 	<section id="sns" class="contents">
 		<div>

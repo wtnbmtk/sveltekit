@@ -181,7 +181,6 @@ main {
 	height: 50px;
 }
 .contents:nth-child(n + 2) {
-	content-visibility: auto;
 	padding: 0 1rem;
 }
 .contents:nth-child(n + 2) h2 {

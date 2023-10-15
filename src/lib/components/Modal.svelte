@@ -1,7 +1,8 @@
 <script>
+	import { closeModal, closeAllModals, openModal, modals } from 'svelte-modals';
+	import { fly } from 'svelte/transition';
 	import { page } from '$app/stores';
 	import { createEventDispatcher } from 'svelte';
-	import { fade } from 'svelte/transition';
 
 	const pages = [
 		{ name: 'Home', path: '/' },
@@ -15,25 +16,40 @@
 	function clickClose() {
 		dispatch('closeDialog');
 	}
+
+	/**
+	 * @type {any}
+	 */
+	export let isOpen;
 </script>
 
-<dialog bind:this={dialog}>
-	<div class="inner">
-		<h2>MENU</h2>
-		<nav>
-			<ul>
-				{#each pages as a}
-					{#if a.path === $page.url.pathname}
-						<li class="active"><a href={a.path} on:click={clickClose}>{a.name}</a></li>
-					{:else}
-						<li><a href={a.path} on:click={clickClose}>{a.name}</a></li>
-					{/if}
-				{/each}
-			</ul>
-		</nav>
-		<button class="close" on:click={clickClose}>CLOSE</button>
-	</div>
-</dialog>
+{#if isOpen}
+	<!-- svelte-ignore a11y-no-redundant-roles -->
+	<dialog
+		role="dialog"
+		class="modal"
+		transition:fly={{ y: 50 }}
+		on:introstart
+		on:outroend
+		bind:this={dialog}
+	>
+		<div class="inner">
+			<h2>MENU</h2>
+			<nav>
+				<ul>
+					{#each pages as a}
+						{#if a.path === $page.url.pathname}
+							<li class="active"><a href={a.path} on:click={clickClose}>{a.name}</a></li>
+						{:else}
+							<li><a href={a.path} on:click={clickClose}>{a.name}</a></li>
+						{/if}
+					{/each}
+				</ul>
+			</nav>
+			<button class="close" on:click={clickClose}>CLOSE</button>
+		</div>
+	</dialog>
+{/if}
 
 <style>
 	dialog {

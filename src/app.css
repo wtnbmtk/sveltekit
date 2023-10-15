@@ -11,24 +11,19 @@
 *,
 *::before,
 *::after {
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 50px;
 }
 body {
 	font-family: 'Noto Sans JP', sans-serif, 'Chivo Mono', monospace;
 	font-size: medium;
 	/* font: 1.2em "Voto Serif GX", serif;
   font-variation-settings: "wght" 100, "wdth" 80, "opsz" 50; */
-	margin: 0px;
-	padding: 0px;
-}
-ul {
-	padding: 0;
-}
-ul li {
-	list-style: none;
 }
 ul li a:hover {
 	text-decoration: underline;
@@ -43,49 +38,25 @@ a {
 img,
 picture {
 	display: block;
-	max-width: 100%;
 }
 
 /* HEAD */
 #TopHeader {
 	container: header / inline-size;
-	position: fixed;
-	top: -50px;
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(8px);
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
-	margin: 50px auto 0;
-	z-index: 999;
-	transition: 0.5s ease;
-}
-/* Fixed */
-#TopHeader.fixed {
-	top: 0;
-	height: 50px;
-	line-height: 50px;
-	margin-top: 0;
-	padding-top: 0;
-	background-color: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(8px);
-}
-#mobile-head {
-	width: fit-content;
-}
-#TopHeader.fixed #mobile-head {
-	height: 50px;
 }
 .brand {
 	display: block;
+	width: fit-content;
 	margin-left: 16px;
-	height: 50px;
-	width: 50px;
 }
 .brand img {
-	height: inherit;
-}
-#TopHeader.fixed .brand {
+	width: auto;
 	height: 50px;
-	width: 50px;
 }
 #ToggleButton {
 	display: block;
@@ -119,7 +90,8 @@ picture {
 main {
 	container: main / inline-size;
 	background-color: white;
-	margin: 50px 0 0 0;
+	position: relative;
+	z-index: -1;
 }
 .contents {
 	margin: auto;
@@ -133,12 +105,9 @@ main {
 .contents p {
 	text-align: justify;
 }
-#TopView:before {
-	margin-top: -100px;
-	height: 100px;
-}
 #TopView {
 	background: linear-gradient(220.55deg, #a531dc 0%, #4300b1 100%);
+	padding-top: 50px;
 }
 .TopContents {
 	display: grid;
@@ -147,8 +116,8 @@ main {
 .TopContents div {
 	display: grid;
 	width: 100%;
-	height: 250px;
 	padding: 0 4rem;
+	height: 250px;
 }
 .TopContents .text {
 	place-content: end center;
@@ -156,7 +125,7 @@ main {
 }
 .TopContents .text h2 {
 	font-size: 1.5rem;
-	margin-top: 0;
+	margin: 0 auto 1rem;
 }
 .TopContents .text p {
 	font-size: 1rem;
@@ -356,7 +325,7 @@ footer {
 	margin: 0 auto;
 }
 #under-nav li {
-	display: block;
+	display: inline-block;
 	width: 110px;
 	text-align: center;
 	margin: 8px auto;
@@ -425,25 +394,14 @@ footer #under-nav a:hover::after {
 	text-align: center;
 	margin-bottom: 8px;
 }
+dialog:-internal-dialog-in-top-layer::backdrop {
+	background: rgba(0, 0, 0, 0.5);
+}
 
 @media screen and (min-width: 800px) {
-	#TopHeader {
-		top: -100px;
-		margin: 100px auto 0;
-		height: 100px;
-		line-height: 100px;
-	}
-	main {
-		margin: 100px 0 0 0;
-	}
 }
 
 @container header (min-width: 800px) {
-	.brand {
-		height: 100px;
-		width: 100px;
-	}
-	/* Toggle Button */
 	#ToggleButton {
 		display: none;
 	}
@@ -487,10 +445,10 @@ footer #under-nav a:hover::after {
 		padding: 0 2rem 0 4rem;
 	}
 	.TopContents .text h2 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 	.TopContents .text p {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 	.TopContents .image {
 		place-content: center;

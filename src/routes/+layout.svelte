@@ -5,15 +5,20 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Dialog from '$lib/components//Dialog.svelte';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+	// @ts-ignore
+	import Headroom from 'svelte-headroom';
 
-	const scrollNavBar = 50;
-	let show = false;
+	const onPin = () => console.log('pin');
+
+	let y = 0;
+	let show = true;
 	onMount(() => {
 		window.onscroll = () => {
-			if (window.scrollY > scrollNavBar) {
-				show = true;
-			} else {
+			if (window.scrollY > y) {
 				show = false;
+			} else if (window.scrollY == y) {
+				show = true;
 			}
 		};
 	});
@@ -37,19 +42,23 @@
 	}
 </script>
 
-<header id="TopHeader" class:fixed={show}>
-	<div id="mobile-head">
-		<a class="brand" href="/">
-			<picture>
-				<source srcset={logo_webp} type="image/webp" />
-				<img src={logo_png} alt="logo" width="100" height="100" />
-			</picture></a
-		>
-		<button id="ToggleButton" class="btn" type="button" on:click={openDialog}>MENU</button>
-		<Dialog bind:dialog on:closeDialog={closeDialog} />
-	</div>
-	<Nav />
-</header>
+<Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={5}>
+	<header id="TopHeader" class:show transition:fade>
+		<div id="mobile-head">
+			<a class="brand" href="/">
+				<picture>
+					<source srcset={logo_webp} type="image/webp" />
+					<img src={logo_png} alt="logo" width="100" height="100" />
+				</picture></a
+			>
+			<button id="ToggleButton" class="btn" type="button" on:click={openDialog}>MENU</button>
+			<Dialog bind:dialog on:closeDialog={closeDialog}>
+				<div transition:fade />
+			</Dialog>
+		</div>
+		<Nav />
+	</header>
+</Headroom>
 
 <slot />
 <a class="line" href="https://lin.ee/VTOX579"

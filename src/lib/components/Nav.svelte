@@ -23,6 +23,8 @@
 <style>
 	a {
 		text-decoration: none;
+		display: block;
+		padding: 0 1rem;
 	}
 	a:hover {
 		filter: brightness(1.4); /* ホバー時に少し明るくする */

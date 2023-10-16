@@ -24,7 +24,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="summary" class="contents">
+	<section id="summary" class="contents contentsCenter">
 		<h3>VISION</h3>
 		<p>
 			現代では対話型AIなどの様々な便利なテクノロジーの登場により、創造するプロセスの効率化は格段に向上しています。テクノロジーを駆使した効率的なクリエイティブは、ビジネスにおいてクリエイターとクライアントとの繋がりを強化します。ウェブダチは人々がお互いを思い遣り、助け合うことで生まれるクリエイティブを思い描いています。

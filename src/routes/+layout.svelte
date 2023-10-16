@@ -43,7 +43,7 @@
 	}
 </script>
 
-<div style="position: relative; z-index: 999;">
+<div id="headroom">
 	<Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={5}>
 		<header id="TopHeader" class:show transition:fade>
 			<div id="mobile-head">

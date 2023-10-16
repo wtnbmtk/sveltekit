@@ -4,7 +4,7 @@
 </script>
 
 <main>
-	<section id="profile" class="contents">
+	<section id="profile" class="contents contentsCenter">
 		<div>
 			<h3>PROFILE</h3>
 			<div class="image">
@@ -26,8 +26,5 @@
 <style>
 	#profile {
 		padding-top: 50px;
-	}
-	h3 {
-		text-align: center;
 	}
 </style>

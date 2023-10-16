@@ -1,6 +1,5 @@
 <main>
-	<section id="TopView" class="contents" />
-	<section id="contact" class="contents">
+	<section id="contact" class="contents contentsCenter">
 		<div>
 			<h3>CONTACT</h3>
 			<!-- svelte-ignore a11y-missing-attribute -->
@@ -18,8 +17,5 @@
 <style>
 	#contact {
 		padding-top: 50px;
-	}
-	h3 {
-		text-align: center;
 	}
 </style>

@@ -47,6 +47,10 @@ picture {
 }
 
 /* HEAD */
+#headroom {
+	position: relative;
+	z-index: 999;
+}
 #TopHeader {
 	container: header / inline-size;
 	background-color: rgba(255, 255, 255, 0.8);
@@ -99,14 +103,20 @@ main {
 }
 .contents {
 	margin: auto;
+	padding: 0 1rem;
 	font-size: medium;
 }
 .contents::before {
 	content: ' ';
 	display: block;
 	visibility: hidden;
+	margin-top: -50px;
+	height: 50px;
 }
-.contents p {
+.contentsCenter h3 {
+	text-align: center;
+}
+.contentsCenter p {
 	text-align: justify;
 }
 #TopView {
@@ -120,12 +130,12 @@ main {
 }
 .TopContents div {
 	display: grid;
+	place-content: center;
 	width: 100%;
-	padding: 0 4rem;
-	height: 250px;
+	padding: 0 1rem;
+	height: 200px;
 }
 .TopContents .text {
-	place-content: end center;
 	color: white;
 }
 .TopContents .text h2 {
@@ -138,8 +148,8 @@ main {
 .TopContents .text a {
 	display: contents;
 }
-.TopContents .image {
-	place-content: start center;
+.TopContents .image img {
+	max-height: 200px;
 }
 .image img {
 	margin: auto;
@@ -147,22 +157,7 @@ main {
 /* .TopContents .image {
   background: url(images/bg3.png) center;
 } */
-.TopContents .image img {
-	max-height: 250px;
-}
-.contents:nth-child(n + 2)::before {
-	margin-top: -50px;
-	height: 50px;
-}
-.contents:nth-child(n + 2) {
-	padding: 0 1rem;
-}
-.contents:nth-child(n + 2) h2 {
-	text-align: center;
-}
-.contents:nth-child(n + 2) h3 {
-	text-align: center;
-}
+
 #summary ol {
 	width: fit-content;
 	margin: auto;
@@ -402,9 +397,6 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 	background: rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (min-width: 800px) {
-}
-
 @container header (min-width: 800px) {
 	#ToggleButton {
 		display: none;
@@ -437,16 +429,19 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 @container main (min-width: 800px) {
+	.contentsCenter {
+		max-width: 800px;
+	}
 	.TopContents {
 		grid-template-columns: 2fr 1fr;
 		place-items: center;
 	}
 	.TopContents div {
-		height: 500px;
+		height: 400px;
+		padding: 0 2rem;
 	}
 	.TopContents .text {
 		place-content: center;
-		padding: 0 2rem 0 4rem;
 	}
 	.TopContents .text h2 {
 		font-size: 2.5rem;
@@ -456,18 +451,24 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 	}
 	.TopContents .image {
 		place-content: center;
-		padding: 0 4rem 0 2rem;
-	}
-	.contents:nth-child(n + 2) {
-		max-width: 800px;
 	}
 	.gridGallery {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
+@container main (min-width: 1000px) {
+	.TopContents .image img {
+		max-height: 300px;
+	}
+}
+@container main (min-width: 1200px) {
+	.TopContents .image img {
+		max-height: 400px;
+	}
+}
 
 @container footer (min-width: 400px) {
-	.contents {
+	.contentsCenter {
 		max-width: 400px;
 	}
 	#under-nav li {
@@ -482,7 +483,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 @container footer (min-width: 800px) {
-	.contents {
+	.contentsCenter {
 		max-width: 800px;
 	}
 }

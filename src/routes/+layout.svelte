@@ -42,23 +42,25 @@
 	}
 </script>
 
-<Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={5}>
-	<header id="TopHeader" class:show transition:fade>
-		<div id="mobile-head">
-			<a class="brand" href="/">
-				<picture>
-					<source srcset={logo_webp} type="image/webp" />
-					<img src={logo_png} alt="logo" width="100" height="100" />
-				</picture></a
-			>
-			<button id="ToggleButton" class="btn" type="button" on:click={openDialog}>MENU</button>
-			<Dialog bind:dialog on:closeDialog={closeDialog}>
-				<div transition:fade />
-			</Dialog>
-		</div>
-		<Nav />
-	</header>
-</Headroom>
+<div style="position: relative; z-index: 999;">
+	<Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={5}>
+		<header id="TopHeader" class:show transition:fade>
+			<div id="mobile-head">
+				<a class="brand" href="/">
+					<picture>
+						<source srcset={logo_webp} type="image/webp" />
+						<img src={logo_png} alt="logo" width="100" height="100" />
+					</picture></a
+				>
+				<button id="ToggleButton" class="btn" type="button" on:click={openDialog}>MENU</button>
+				<Dialog bind:dialog on:closeDialog={closeDialog}>
+					<div transition:fade />
+				</Dialog>
+			</div>
+			<Nav />
+		</header>
+	</Headroom>
+</div>
 
 <slot />
 <a class="line" href="https://lin.ee/VTOX579"

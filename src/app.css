@@ -25,6 +25,12 @@ body {
 	/* font: 1.2em "Voto Serif GX", serif;
   font-variation-settings: "wght" 100, "wdth" 80, "opsz" 50; */
 }
+h1,
+h2,
+h3,
+h4 {
+	margin: 16px auto 8px;
+}
 ul li a:hover {
 	text-decoration: underline;
 }
@@ -90,8 +96,6 @@ picture {
 main {
 	container: main / inline-size;
 	background-color: white;
-	position: relative;
-	z-index: -1;
 }
 .contents {
 	margin: auto;
@@ -106,7 +110,8 @@ main {
 	text-align: justify;
 }
 #TopView {
-	background: linear-gradient(220.55deg, #a531dc 0%, #4300b1 100%);
+	background-color: #ff5722;
+	background-image: linear-gradient(315deg, #ff5722 0%, #ffcc2f 74%);
 	padding-top: 50px;
 }
 .TopContents {
@@ -143,7 +148,7 @@ main {
   background: url(images/bg3.png) center;
 } */
 .TopContents .image img {
-	max-width: 250px;
+	max-height: 250px;
 }
 .contents:nth-child(n + 2)::before {
 	margin-top: -50px;
@@ -158,21 +163,19 @@ main {
 .contents:nth-child(n + 2) h3 {
 	text-align: center;
 }
-
-.DataGrid p {
-	margin-top: 0;
+#summary ol {
+	width: fit-content;
+	margin: auto;
 }
-.DataGrid dl {
+.DataGrid {
 	display: grid;
-	grid-template-columns: 1fr 2fr 2fr;
+	grid-template-columns: 1fr 2fr;
 	border-right: solid 1px black;
 	border-left: solid 1px black;
-	margin-bottom: 0;
+	margin: 8px 0;
 }
 .DataGrid dt {
 	border-top: solid 1px black;
-	background-color: blueviolet;
-	color: white;
 }
 .DataGrid dt:nth-of-type(4) {
 	border-bottom: solid 1px black;
@@ -183,8 +186,7 @@ main {
 	border-left: solid 1px black;
 	padding-left: 1rem;
 }
-.DataGrid dd:nth-of-type(7),
-.DataGrid dd:nth-of-type(8) {
+.DataGrid dd:nth-of-type(4) {
 	border-bottom: solid 1px black;
 }
 .DataGrid span {

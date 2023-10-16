@@ -6,6 +6,7 @@
 	import Dialog from '$lib/components//Dialog.svelte';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+
 	// @ts-ignore
 	import Headroom from 'svelte-headroom';
 

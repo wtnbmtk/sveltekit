@@ -4,7 +4,6 @@
 </script>
 
 <main>
-	<section id="TopView" class="contents" />
 	<section id="profile" class="contents">
 		<div>
 			<h3>PROFILE</h3>
@@ -23,3 +22,12 @@
 		</div>
 	</section>
 </main>
+
+<style>
+	#profile {
+		padding-top: 50px;
+	}
+	h3 {
+		text-align: center;
+	}
+</style>

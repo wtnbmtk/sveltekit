@@ -14,3 +14,12 @@
 		</div>
 	</section>
 </main>
+
+<style>
+	#contact {
+		padding-top: 50px;
+	}
+	h3 {
+		text-align: center;
+	}
+</style>

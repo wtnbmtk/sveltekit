@@ -19,7 +19,7 @@
 			<div class="image">
 				<picture>
 					<source srcset={draw_webp} type="image/webp" />
-					<img src={draw_png} alt="logo" width="auto" height="500" />
+					<img src={draw_png} alt="logo" width="533" height="400" />
 				</picture>
 			</div>
 		</div>

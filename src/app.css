@@ -150,6 +150,7 @@ main {
 }
 .TopContents .image img {
 	max-height: 200px;
+	width: auto;
 }
 .image img {
 	margin: auto;

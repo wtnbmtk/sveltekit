@@ -1,8 +1,6 @@
 <script>
-	import logo_webp from '$lib/assets/logo1.webp';
-	import logo_png from '$lib/assets/logo1.png';
-	import draw_webp from '$lib/assets/draw.webp';
-	import draw_png from '$lib/assets/draw.png';
+	import draw_small from '$lib/assets/draw_small.png';
+	import draw_medium from '$lib/assets/draw_medium.png';
 </script>
 
 <main>
@@ -18,8 +16,8 @@
 			</div>
 			<div class="image">
 				<picture>
-					<source srcset={draw_webp} type="image/webp" />
-					<img src={draw_png} alt="logo" width="533" height="400" />
+					<source srcset={draw_medium} media="(min-width: 1200px)" />
+					<img src={draw_small} alt="logo" width="533" height="400" />
 				</picture>
 			</div>
 		</div>

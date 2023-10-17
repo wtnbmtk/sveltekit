@@ -151,10 +151,9 @@ main {
 .TopContents .image img {
 	max-height: 200px;
 	width: auto;
-}
-.image img {
 	margin: auto;
 }
+
 /* .TopContents .image {
   background: url(images/bg3.png) center;
 } */
@@ -457,12 +456,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
-@container main (min-width: 1000px) {
+@container main (min-width: 1200px) {
 	.TopContents .image img {
 		max-height: 300px;
 	}
 }
-@container main (min-width: 1200px) {
+@container main (min-width: 1600px) {
 	.TopContents .image img {
 		max-height: 400px;
 	}

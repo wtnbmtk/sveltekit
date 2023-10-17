@@ -68,6 +68,7 @@
 	><img
 		src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
 		alt="友だち追加"
+		width="116"
 		height="36"
 	/></a
 >

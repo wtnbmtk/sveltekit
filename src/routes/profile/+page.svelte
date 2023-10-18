@@ -27,4 +27,7 @@
 	#profile {
 		padding-top: 50px;
 	}
+	#profile .image img {
+		margin: auto;
+	}
 </style>

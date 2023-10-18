@@ -16,8 +16,8 @@
 			</div>
 			<div class="image">
 				<picture>
-					<source srcset={draw_medium} media="(min-width: 1200px)" />
-					<img src={draw_small} alt="logo" width="533" height="400" />
+					<source srcset={draw_small} media="(max-width: 1200px)" />
+					<img src={draw_medium} alt="logo" width="533" height="400" />
 				</picture>
 			</div>
 		</div>

@@ -6,7 +6,8 @@
 	const pages = [
 		{ name: 'Home', path: '/' },
 		{ name: 'Profile', path: '/profile' },
-		{ name: 'Contact', path: '/contact' }
+		{ name: 'Contact', path: '/contact' },
+		{ name: 'Infomation', path: '/information' }
 	];
 
 	export let dialog; // （←ポイント） 要素をバインドすることで親側で表示・閉じるの制御が可能に

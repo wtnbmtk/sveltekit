@@ -4,7 +4,8 @@
 	const pages = [
 		{ name: 'Home', path: '/' },
 		{ name: 'Profile', path: '/profile' },
-		{ name: 'Contact', path: '/contact' }
+		{ name: 'Contact', path: '/contact' },
+		{ name: 'Infomation', path: '/information' }
 	];
 </script>
 
@@ -25,6 +26,7 @@
 		text-decoration: none;
 		display: block;
 		padding: 0 1rem;
+		color: black;
 	}
 	a:hover {
 		filter: brightness(1.4); /* ホバー時に少し明るくする */

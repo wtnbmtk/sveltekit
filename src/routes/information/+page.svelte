@@ -1,6 +1,6 @@
 <main>
 	<section id="information" class="contents contentsCenter">
-		<h3>INFORMATION</h3>
+		<h3>INFORMATION(特定商取引法に基づく表記)</h3>
 		<dl class="DataGrid">
 			<dt>販売業社の名称</dt>
 			<dd>ウェブダチ</dd>

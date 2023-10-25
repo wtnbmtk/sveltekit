@@ -29,7 +29,7 @@ h1,
 h2,
 h3,
 h4 {
-	margin: 16px auto 8px;
+	margin: 16px auto;
 }
 ul li a:hover {
 	text-decoration: underline;
@@ -102,15 +102,15 @@ main {
 	padding: 0 1rem;
 	font-size: medium;
 }
-.contents:nth-child(1) {
-	margin-top: 50px;
-}
 .contents::before {
 	content: ' ';
 	display: block;
 	visibility: hidden;
 	margin-top: -50px;
 	height: 50px;
+}
+.contentsTop {
+	margin-top: 50px;
 }
 .contentsCenter h3 {
 	text-align: center;
@@ -162,18 +162,22 @@ main {
 }
 .DataGrid {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 3fr;
 	border-right: solid 1px black;
 	border-left: solid 1px black;
 	margin: 8px 0;
 }
 .DataGrid dt {
 	border-top: solid 1px black;
+	padding: 8px;
 	display: grid;
-	place-items: center;
+	place-content: center;
 }
 .DataGrid dd {
+	display: grid;
+	place-content: center start;
 	margin: 0;
+	padding: 8px;
 	border-top: solid 1px black;
 	border-left: solid 1px black;
 }
@@ -183,7 +187,7 @@ main {
 	vertical-align: top;
 }
 .DataGrid ul {
-	padding-left: 2rem;
+	padding-left: 1.5rem;
 }
 .prices {
 	text-decoration: underline;

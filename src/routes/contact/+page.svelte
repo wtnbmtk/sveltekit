@@ -1,5 +1,5 @@
 <main>
-	<section id="contact" class="contents contentsCenter">
+	<section id="contact" class="contents contentsTop contentsCenter">
 		<h3>CONTACT</h3>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<iframe

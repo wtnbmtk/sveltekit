@@ -4,7 +4,7 @@
 </script>
 
 <main>
-	<section id="profile" class="contents contentsCenter">
+	<section id="profile" class="contents contentsTop contentsCenter">
 		<h3>PROFILE</h3>
 		<div class="image">
 			<picture>

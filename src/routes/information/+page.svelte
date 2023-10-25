@@ -1,6 +1,6 @@
 <main>
-	<section id="information" class="contents contentsCenter">
-		<h3>INFORMATION(特定商取引法に基づく表記)</h3>
+	<section id="information" class="contents contentsTop contentsCenter">
+		<h3>INFORMATION<br />（特定商取引法に基づく表記）</h3>
 		<dl class="DataGrid">
 			<dt>販売業社の名称</dt>
 			<dd>ウェブダチ</dd>
@@ -16,28 +16,28 @@
 			<dd>
 				<ul>
 					<li>
-						ドメインサービス(例:Xserverドメイン)の<a
+						ドメインサービス（例:Xserverドメイン）の<a
 							class="prices"
 							href="https://www.xdomain.ne.jp/"
 							target="_blank">利用料</a
 						>
 					</li>
 					<li>
-						ホスティングサービス(例:Cloudflare Pages)<span>*1</span>の<a
+						ホスティングサービス（例:Cloudflare Pages）<span>*1</span>の<a
 							class="prices"
 							href="https://pages.cloudflare.com/#pricing"
 							target="_blank">利用料</a
 						>
 					</li>
 					<li>
-						CMSサービス(例:Spearly CMS)<span>*2</span>の<a
+						CMSサービス（例:Spearly CMS）<span>*2</span>の<a
 							class="prices"
 							href="https://spearly.com/ja/cms/pricing"
 							target="_blank">利用料</a
 						>
 					</li>
 					<li>
-						決済サービス(例:Stripe)の<a
+						決済サービス（例:Stripe）の<a
 							class="prices"
 							href="https://stripe.com/jp/pricing"
 							target="_blank">利用料</a
@@ -64,9 +64,9 @@
 			<dt>販売価格</dt>
 			<dd>
 				<ul>
-					<li>スタンダードプラン: ¥50,000</li>
-					<li>CMSプラン: ¥100,000</li>
-					<li>ECプラン: ¥200,000</li>
+					<li>Webdachi S : ¥50,000</li>
+					<li>Webdachi CMS : ¥100,000</li>
+					<li>Webdachi EC : ¥200,000</li>
 				</ul>
 			</dd>
 		</dl>

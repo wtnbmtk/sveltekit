@@ -72,7 +72,6 @@
 		height="36"
 	/></a
 >
-<div style="position: fixed;" />
 <footer>
 	<section id="sns" class="contents">
 		<div>

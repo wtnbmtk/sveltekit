@@ -160,33 +160,25 @@ main {
 	width: fit-content;
 	margin: auto;
 }
-.DataGrid {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-	border-right: solid 1px black;
-	border-left: solid 1px black;
-	margin: 8px 0;
-}
-.DataGrid dt {
-	border-top: solid 1px black;
-	padding: 8px;
+.data dt {
 	display: grid;
 	place-content: center;
+	padding: 8px;
+	border-top: solid 1px black;
 }
-.DataGrid dd {
+.data dd {
 	display: grid;
 	place-content: center start;
-	margin: 0;
 	padding: 8px;
 	border-top: solid 1px black;
 	border-left: solid 1px black;
 }
 
-.DataGrid span {
+.data span {
 	font-size: x-small;
 	vertical-align: top;
 }
-.DataGrid ul {
+.data ul {
 	padding-left: 1.5rem;
 }
 .prices {

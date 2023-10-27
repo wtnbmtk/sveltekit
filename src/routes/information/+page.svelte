@@ -1,7 +1,7 @@
 <main>
 	<section id="information" class="contents contentsTop contentsCenter">
 		<h3>INFORMATION<br />（特定商取引法に基づく表記）</h3>
-		<dl class="DataGrid">
+		<dl class="data">
 			<dt>販売業社の名称</dt>
 			<dd>ウェブダチ</dd>
 			<dt>所在地</dt>
@@ -74,14 +74,21 @@
 </main>
 
 <style>
-	.DataGrid .mail {
+	.data {
+		display: grid;
+		grid-template-columns: 120px auto;
+		border-right: solid 1px black;
+		border-left: solid 1px black;
+		margin: 8px 0;
+	}
+	.data .mail {
 		text-decoration: revert;
 		color: revert;
 	}
-	.DataGrid dt:nth-of-type(11) {
+	.data dt:nth-of-type(11) {
 		border-bottom: solid 1px black;
 	}
-	.DataGrid dd:nth-of-type(11) {
+	.data dd:nth-of-type(11) {
 		border-bottom: solid 1px black;
 	}
 </style>

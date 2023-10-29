@@ -18,6 +18,9 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 50px;
 }
+html:has(dialog[open]) {
+	overflow: hidden;
+}
 body {
 	font-family: zen-maru-gothic, sans-serif;
 	font-weight: 400;
@@ -47,7 +50,7 @@ picture {
 	position: relative;
 	z-index: 999;
 }
-#TopHeader {
+header {
 	container: header / inline-size;
 	background-color: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(8px);
@@ -64,7 +67,7 @@ picture {
 	width: auto;
 	height: 50px;
 }
-#ToggleButton {
+.btn {
 	display: block;
 	position: absolute;
 	inset: 0 8px 0 auto;
@@ -385,7 +388,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 @container header (min-width: 800px) {
-	#ToggleButton {
+	.btn {
 		display: none;
 	}
 	#global-nav,

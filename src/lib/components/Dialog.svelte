@@ -40,6 +40,11 @@
 	dialog {
 		margin: auto;
 		padding: 8px;
+		display: grid;
+		transition: opacity 0.5s ease-out;
+	}
+	dialog:not([open]) {
+		opacity: 0;
 	}
 	h2 {
 		width: 100%;

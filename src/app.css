@@ -25,6 +25,7 @@ body {
 	font-family: zen-maru-gothic, sans-serif;
 	font-weight: 400;
 	font-style: normal;
+	color: #333333;
 	/* font: 1.2em "Voto Serif GX", serif;
   	font-variation-settings: "wght" 100, "wdth" 80, "opsz" 50; */
 }
@@ -58,15 +59,6 @@ header {
 	height: 50px;
 	line-height: 50px;
 }
-.brand {
-	display: block;
-	width: fit-content;
-	margin-left: 16px;
-}
-.brand img {
-	width: auto;
-	height: 50px;
-}
 .btn {
 	display: block;
 	position: absolute;
@@ -75,24 +67,6 @@ header {
 	cursor: pointer;
 	background-color: transparent;
 	border: none;
-}
-#global-nav,
-#headerSNS {
-	display: none;
-	position: absolute;
-}
-#global-nav {
-	inset: 0;
-	margin: auto;
-}
-#global-nav ul {
-	margin: 0;
-}
-#headerSNS {
-	inset: 0 0 0 auto;
-}
-#headerSNS a {
-	padding: 0 8px;
 }
 
 /* MAIN */
@@ -388,21 +362,6 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 @container header (min-width: 800px) {
-	.btn {
-		display: none;
-	}
-	#global-nav,
-	#headerSNS {
-		display: block;
-		width: fit-content;
-	}
-	#global-nav ul li {
-		display: inline-block;
-		padding: 0 1rem;
-	}
-	#headerSNS {
-		padding-right: 8px;
-	}
 }
 
 @container main (min-width: 600px) {

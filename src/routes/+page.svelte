@@ -29,7 +29,7 @@
 		</p>
 		<h3>WORKFLOW</h3>
 		<ol>
-			<li>LINE公式アカウントに相談を受け付け</li>
+			<li>Slackワークスペースに招待</li>
 			<li>サイトデザインについてヒアリング</li>
 			<li>初期費用の入金確認後、制作を開始</li>
 			<li>お客様にサイトをご確認していただき、運用を開始</li>
@@ -37,14 +37,14 @@
 		</ol>
 		<h3>PRICES&DETAILS</h3>
 		<p>
-			お支払い頂く料金はプランによって異なり、以下に示す費用欄内の料金の合算となります。初期費用以外の各種サービスの料金はサイトの規模によって変動しますのでご注意ください。
+			お支払い頂く料金はプランによって異なり、以下に示す費用内訳の料金の合算となります。初期費用以外の各種サービスの料金はサイトの規模によって変動しますのでご注意ください。
 		</p>
 
-		<h4>Webdachi S</h4>
+		<h4>Standard Plan</h4>
 		<div class="plan">
 			<dl class="data">
 				<dt>プラン名</dt>
-				<dd>Webdachi S</dd>
+				<dd>Standard Plan</dd>
 				<dt>初月支払総額</dt>
 				<dd>￥50,000~</dd>
 				<dt>内訳</dt>
@@ -82,11 +82,11 @@
 				/>
 			</div>
 		</div>
-		<h4>Webdachi CMS</h4>
+		<h4>CMS Plan</h4>
 		<div class="plan">
 			<dl class="data">
 				<dt>プラン名</dt>
-				<dd>Webdachi CMS</dd>
+				<dd>CMS Plan</dd>
 				<dt>初月支払総額</dt>
 				<dd>￥100,000~</dd>
 				<dt>内訳</dt>
@@ -131,17 +131,17 @@
 				/>
 			</div>
 		</div>
-		<h4>Webdachi EC</h4>
+		<h4>EC Plan</h4>
 		<div class="plan">
 			<dl class="data">
 				<dt>プラン名</dt>
-				<dd>Webdachi EC</dd>
+				<dd>EC Plan</dd>
 				<dt>初月支払総額</dt>
-				<dd>￥200,000~</dd>
+				<dd>￥300,000~</dd>
 				<dt>内訳</dt>
 				<dd>
 					<ul>
-						<li>初期費用<b>￥200,000</b></li>
+						<li>初期費用<b>￥300,000</b></li>
 						<li>
 							ドメインサービス（例 : Xserverドメイン）の<a
 								class="prices"
@@ -182,7 +182,7 @@
 				</script>
 
 				<stripe-buy-button
-					buy-button-id="buy_btn_1O5gISAIPjnW5yZ1YOsIyR1O"
+					buy-button-id="buy_btn_1O6va2AIPjnW5yZ1N3wRK47m"
 					publishable-key="pk_live_51O4Nt8AIPjnW5yZ1xpcThU3EhrRdaLkVHN9YDM0otNAgKHrVoUwdLyZD7BHzJ1FvsFm7QoG2L2nn8kpEz2bsKLV000CU0ShlND"
 				/>
 			</div>
@@ -223,7 +223,7 @@
 		place-content: center;
 		margin-left: 8px;
 	}
-	@media (width < 600px) {
+	@media (width <= 800px) {
 		.plan {
 			display: initial;
 		}

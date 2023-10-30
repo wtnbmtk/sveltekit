@@ -33,31 +33,21 @@
 <div id="headroom">
 	<Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={5}>
 		<header>
-			<div id="mobile-head">
-				<a class="brand" href="/">
-					<picture>
-						<source srcset={logo_webp} type="image/webp" />
-						<img src={logo_png} alt="logo" width="100" height="100" />
-					</picture></a
-				>
-				<button class="btn" type="button" on:click={openDialog}>MENU</button>
-
-				<Dialog bind:dialog on:closeDialog={closeDialog} />
-			</div>
+			<a class="brand" href="/">
+				<picture>
+					<source srcset={logo_webp} type="image/webp" />
+					<img src={logo_png} alt="logo" width="100" height="15" />
+				</picture></a
+			>
+			<button class="btn" type="button" on:click={openDialog}>MENU</button>
+			<Dialog bind:dialog on:closeDialog={closeDialog} />
 			<Nav />
 		</header>
 	</Headroom>
 </div>
 
 <slot />
-<a class="line" href="https://lin.ee/VTOX579"
-	><img
-		src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-		alt="友だち追加"
-		width="116"
-		height="36"
-	/></a
->
+
 <footer>
 	<section id="sns" class="contents">
 		<div>
@@ -77,4 +67,14 @@
 </footer>
 
 <style>
+	.brand {
+		display: inline-block;
+		margin-left: 16px;
+	}
+
+	@media (width >= 800px) {
+		.btn {
+			display: none;
+		}
+	}
 </style>

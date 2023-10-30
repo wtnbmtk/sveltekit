@@ -20,13 +20,24 @@
 		{/each}
 	</ul>
 </nav>
+<nav id="headerSNS">
+	<ul>
+		<li>
+			<a href="https://www.instagram.com/wtnbmtk/"><i class="fa-brands fa-instagram fa-lg" /></a>
+		</li>
+		<li><a href="https://twitter.com/mtk754522/"><i class="fa-brands fa-twitter fa-lg" /></a></li>
+		<li>
+			<a href="mailto:wtnbmtk7@gmail.com"><i class="fa-sharp fa-solid fa-envelope fa-lg" /></a>
+		</li>
+	</ul>
+</nav>
 
 <style>
 	a {
 		text-decoration: none;
-		display: block;
+		display: inline-block;
 		padding: 0 1rem;
-		color: black;
+		color: #333333;
 	}
 	a:hover {
 		filter: brightness(1.4); /* ホバー時に少し明るくする */
@@ -34,5 +45,40 @@
 	}
 	.active a {
 		color: #ff5722;
+	}
+	#global-nav,
+	#headerSNS {
+		display: none;
+		position: absolute;
+	}
+	#global-nav {
+		inset: 0;
+		margin: auto;
+	}
+	#global-nav ul {
+		margin: 0;
+	}
+	#headerSNS {
+		inset: 0 0 0 auto;
+	}
+	#headerSNS a {
+		padding: 0 8px;
+	}
+	@media (width >= 800px) {
+		#global-nav,
+		#headerSNS {
+			display: block;
+			width: fit-content;
+		}
+		#global-nav ul li,
+		#headerSNS ul li {
+			display: inline-block;
+		}
+		#global-nav ul li {
+			padding: 0 1rem;
+		}
+		#headerSNS ul li {
+			padding-right: 8px;
+		}
 	}
 </style>

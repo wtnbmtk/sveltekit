@@ -40,7 +40,6 @@
 	dialog {
 		margin: auto;
 		padding: 8px;
-		display: grid;
 		transition: opacity 0.5s ease-out;
 	}
 	dialog:not([open]) {

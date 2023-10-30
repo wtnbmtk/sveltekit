@@ -41,9 +41,8 @@
 					</picture></a
 				>
 				<button class="btn" type="button" on:click={openDialog}>MENU</button>
-				<div class="open" transition:fade>
-					<Dialog bind:dialog on:closeDialog={closeDialog} />
-				</div>
+
+				<Dialog bind:dialog on:closeDialog={closeDialog} />
 			</div>
 			<Nav />
 		</header>

@@ -40,7 +40,11 @@
 				</picture></a
 			>
 			<button class="btn" type="button" on:click={openDialog}>MENU</button>
-			<Dialog bind:dialog on:closeDialog={closeDialog} />
+			<Dialog bind:dialog on:closeDialog={closeDialog}>
+				<div transition:fade>
+					<h2>Hello</h2>
+				</div>
+			</Dialog>
 			<Nav />
 		</header>
 	</Headroom>

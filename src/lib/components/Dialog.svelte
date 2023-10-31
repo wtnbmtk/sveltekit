@@ -1,7 +1,9 @@
 <script>
 	import { page } from '$app/stores';
 	import { createEventDispatcher } from 'svelte';
+	import { Modal, Content, Trigger } from 'sv-popup';
 	import { fade } from 'svelte/transition';
+	let visible = true;
 
 	const pages = [
 		{ name: 'Home', path: '/' },

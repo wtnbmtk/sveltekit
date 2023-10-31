@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import { createEventDispatcher } from 'svelte';
-	import { Modal, Content, Trigger } from 'sv-popup';
 	import { fade } from 'svelte/transition';
 	let visible = true;
 
@@ -20,7 +19,7 @@
 	}
 </script>
 
-<dialog bind:this={dialog}>
+<dialog id="dialog" bind:this={dialog}>
 	<div class="inner">
 		<h2>MENU</h2>
 		<nav>
@@ -34,18 +33,29 @@
 				{/each}
 			</ul>
 		</nav>
-		<button class="close" on:click={clickClose}>CLOSE</button>
+		<form method="dialog">
+			<button class="close" on:click={clickClose}>CLOSE</button>
+		</form>
 	</div>
 </dialog>
 
 <style>
 	dialog {
+		color: #333333;
 		margin: auto;
 		padding: 8px;
-		transition: opacity 0.5s ease-out;
-	}
-	dialog:not([open]) {
+		pointer-events: none;
 		opacity: 0;
+		transition: opacity 1s;
+		display: grid;
+		place-content: center;
+	}
+	dialog[open] {
+		opacity: 1;
+		pointer-events: inherit;
+	}
+	dialog::backdrop {
+		background: rgba(0, 0, 0, 0.5);
 	}
 	h2 {
 		width: 100%;
@@ -53,6 +63,7 @@
 	}
 	li {
 		list-style: none;
+		margin: 1rem;
 	}
 	a {
 		display: block;
@@ -66,11 +77,16 @@
 		text-decoration: underline;
 	}
 	.active {
-		background-color: #ff5722;
+		background-color: black;
+	}
+	.active a {
+		color: white;
 	}
 	.close {
 		display: block;
 		margin: 2rem auto 0;
 		cursor: pointer;
+		background-color: transparent;
+		border: none;
 	}
 </style>

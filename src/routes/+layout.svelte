@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
-	import logo_webp from '$lib/assets/logo1.webp';
-	import logo_png from '$lib/assets/logo1.png';
+	import logo_webp from '$lib/assets/black.webp';
+	import logo_png from '$lib/assets/black.png';
 	import Nav from '$lib/components/Nav.svelte';
 	import Dialog from '$lib/components//Dialog.svelte';
 	import { fade } from 'svelte/transition';
@@ -31,7 +31,7 @@
 </script>
 
 <div id="headroom">
-	<Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={5}>
+	<Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={0}>
 		<header>
 			<a class="brand" href="/">
 				<picture>
@@ -40,15 +40,11 @@
 				</picture></a
 			>
 			<button class="btn" type="button" on:click={openDialog}>MENU</button>
-			<Dialog bind:dialog on:closeDialog={closeDialog}>
-				<div transition:fade>
-					<h2>Hello</h2>
-				</div>
-			</Dialog>
 			<Nav />
 		</header>
 	</Headroom>
 </div>
+<Dialog bind:dialog on:closeDialog={closeDialog} />
 
 <slot />
 

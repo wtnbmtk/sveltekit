@@ -37,14 +37,17 @@
 		text-decoration: none;
 		display: inline-block;
 		padding: 0 1rem;
-		color: #333333;
+		color: black;
 	}
 	a:hover {
 		filter: brightness(1.4); /* ホバー時に少し明るくする */
 		text-decoration: underline;
 	}
+	.active {
+		background-color: black;
+	}
 	.active a {
-		color: #ff5722;
+		color: white;
 	}
 	#global-nav,
 	#headerSNS {

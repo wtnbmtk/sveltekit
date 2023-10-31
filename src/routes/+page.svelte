@@ -1,6 +1,6 @@
 <script>
-	import draw_small from '$lib/assets/draw_small.png';
-	import draw_medium from '$lib/assets/draw_medium.png';
+	import draw_small from '$lib/assets/dachi-s.png';
+	import draw_medium from '$lib/assets/dachi-m.png';
 </script>
 
 <main>
@@ -17,7 +17,7 @@
 			<div class="image">
 				<picture>
 					<source srcset={draw_small} media="(max-width: 1200px)" />
-					<img src={draw_medium} alt="logo" width="533" height="400" />
+					<img src={draw_medium} alt="logo" width="400" height="315" />
 				</picture>
 			</div>
 		</div>

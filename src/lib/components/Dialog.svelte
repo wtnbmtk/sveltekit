@@ -1,12 +1,10 @@
 <script>
 	import { page } from '$app/stores';
 	import { createEventDispatcher } from 'svelte';
-	import { fade } from 'svelte/transition';
-	let visible = true;
 
 	const pages = [
 		{ name: 'Home', path: '/' },
-		{ name: 'Profile', path: '/profile' },
+		{ name: 'About', path: '/about' },
 		{ name: 'Contact', path: '/contact' },
 		{ name: 'Infomation', path: '/information' }
 	];
@@ -31,6 +29,13 @@
 						<li><a href={a.path} on:click={clickClose}>{a.name}</a></li>
 					{/if}
 				{/each}
+			</ul>
+		</nav>
+		<nav>
+			<ul>
+				<li>
+					<a href="mailto:wtnbmtk7@gmail.com"><i class="fa-sharp fa-solid fa-envelope fa-lg" /></a>
+				</li>
 			</ul>
 		</nav>
 		<form method="dialog">
@@ -84,7 +89,7 @@
 	}
 	.close {
 		display: block;
-		margin: 2rem auto 0;
+		margin: 1rem auto;
 		cursor: pointer;
 		background-color: transparent;
 		border: none;

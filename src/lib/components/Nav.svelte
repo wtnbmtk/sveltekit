@@ -3,7 +3,7 @@
 
 	const pages = [
 		{ name: 'Home', path: '/' },
-		{ name: 'Profile', path: '/profile' },
+		{ name: 'About', path: '/about' },
 		{ name: 'Contact', path: '/contact' },
 		{ name: 'Infomation', path: '/information' }
 	];
@@ -22,10 +22,6 @@
 </nav>
 <nav id="headerSNS">
 	<ul>
-		<li>
-			<a href="https://www.instagram.com/wtnbmtk/"><i class="fa-brands fa-instagram fa-lg" /></a>
-		</li>
-		<li><a href="https://twitter.com/mtk754522/"><i class="fa-brands fa-twitter fa-lg" /></a></li>
 		<li>
 			<a href="mailto:wtnbmtk7@gmail.com"><i class="fa-sharp fa-solid fa-envelope fa-lg" /></a>
 		</li>

@@ -23,7 +23,7 @@ html:has(dialog[open]) {
 }
 body {
 	font-family: zen-maru-gothic, sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 	font-style: normal;
 	/* font: 1.2em "Voto Serif GX", serif;
   	font-variation-settings: "wght" 100, "wdth" 80, "opsz" 50; */
@@ -32,7 +32,10 @@ h1,
 h2,
 h3,
 h4 {
-	margin: 16px auto;
+	margin: 24px auto 8px;
+}
+h4 {
+	font-size: 1.5rem;
 }
 ul li a:hover {
 	text-decoration: underline;
@@ -90,9 +93,7 @@ main {
 }
 .contentsCenter h3 {
 	text-align: center;
-}
-.contentsCenter p {
-	text-align: justify;
+	font-size: 2rem;
 }
 /* #TopView {
 	background-color: #942343;
@@ -132,10 +133,6 @@ main {
   background: url(images/bg3.png) center;
 } */
 
-#summary ol {
-	width: fit-content;
-	margin: auto;
-}
 .data {
 	border-right: solid 2px black;
 	border-left: solid 2px black;
@@ -164,17 +161,6 @@ main {
 .prices {
 	text-decoration: underline;
 	color: blue;
-}
-#profile .image img {
-	max-width: 80px;
-	border-radius: 50%;
-}
-#profile .text {
-	max-width: 400px;
-	margin: auto;
-}
-#profile .text h3 {
-	text-align: center;
 }
 #form h1 {
 	display: none;
@@ -284,17 +270,17 @@ main {
 /* FOOTER*/
 footer {
 	container: footer / inline-size;
+	margin-top: 50px;
 }
 #under-nav {
 	padding: 0;
 	width: fit-content;
-	margin: 16px auto 0;
+	margin: auto;
 }
 #under-nav li {
 	display: inline-block;
 	width: 110px;
 	text-align: center;
-	margin: 8px auto;
 }
 footer #under-nav a {
 	position: relative;
@@ -408,11 +394,6 @@ footer #under-nav a:hover::after {
 @container main (min-width: 1200px) {
 	.TopContents .image img {
 		max-height: 300px;
-	}
-}
-@container main (min-width: 1600px) {
-	.TopContents .image img {
-		max-height: 400px;
 	}
 }
 

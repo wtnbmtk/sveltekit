@@ -4,7 +4,6 @@
 	import logo_png from '$lib/assets/black.png';
 	import Nav from '$lib/components/Nav.svelte';
 	import Dialog from '$lib/components//Dialog.svelte';
-	import { fade } from 'svelte/transition';
 
 	// @ts-ignore
 	import Headroom from 'svelte-headroom';

@@ -1,6 +1,9 @@
 <script>
-	import draw_small from '$lib/assets/dachi-s.png';
 	import draw_medium from '$lib/assets/dachi-m.png';
+	import draw_small from '$lib/assets/dachi-s.png';
+	import plan_Standard from '$lib/assets/Standard.png';
+	import plan_CMS from '$lib/assets/CMS.png';
+	import plan_EC from '$lib/assets/EC.png';
 </script>
 
 <main>
@@ -16,8 +19,8 @@
 			</div>
 			<div class="image">
 				<picture>
-					<source srcset={draw_small} media="(max-width: 1200px)" />
-					<img src={draw_medium} alt="logo" width="400" height="315" />
+					<source srcset={draw_medium} media="(min-width: 1200px)" />
+					<img src={draw_small} alt="draw" width="517" height="400" />
 				</picture>
 			</div>
 		</div>
@@ -31,13 +34,13 @@
 		<ol>
 			<li>Slackワークスペースに招待</li>
 			<li>サイトデザインについてヒアリング</li>
-			<li>初期費用の入金確認後、制作を開始</li>
+			<li>製作費の入金確認後、制作を開始</li>
 			<li>お客様にサイトをご確認していただき、運用を開始</li>
 			<li>継続的にサイト運営をサポート</li>
 		</ol>
 		<h3>PRICES&DETAILS</h3>
 		<p>
-			お支払い頂く料金はプランによって異なり、以下に示す費用内訳の料金の合算となります。初期費用以外の各種サービスの料金はサイトの規模によって変動しますのでご注意ください。
+			お支払い頂く料金はプランによって異なり、以下に示す費用内訳の料金の合算となります。製作費以外の各種サービスの料金はサイトの規模によって変動しますのでご注意ください。価格は全て税込価格です。
 		</p>
 
 		<h4>Standard Plan</h4>
@@ -50,36 +53,32 @@
 				<dt>内訳</dt>
 				<dd>
 					<ul>
-						<li>初期費用<b>￥50,000</b></li>
-						<li>
-							ドメインサービス（例 : Xserverドメイン）の<a
-								class="prices"
-								href="https://www.xdomain.ne.jp/"
-								target="_blank">利用料</a
-							>
-						</li>
-						<li>
-							ホスティングサービス（Cloudflare Pages）の<a
-								class="prices"
-								href="https://pages.cloudflare.com/#pricing"
-								target="_blank">利用料</a
-							>
-						</li>
+						<li>製作費<b>￥50,000</b>（初期費用）</li>
+						<li>ドメインサービスの利用料</li>
+						<li>ホスティングサービスの利用料（従量課金）</li>
 					</ul>
 				</dd>
 				<dt>仕様</dt>
 				<dd>
-					基本となるA4サイズのページ（トップページやプロフィールページなど）が３ページまでで、CMS機能が無いスタンダードなプラン。
+					<ul>
+						<li>オリジナルデザイン</li>
+						<li>固定ページA4サイズ3ページまで</li>
+						<li>独自ドメイン</li>
+						<li>サーバーレス</li>
+					</ul>
 				</dd>
 			</dl>
 			<div class="stripe">
-				<script async src="https://js.stripe.com/v3/buy-button.js">
-				</script>
+				<div class="catalog">
+					<img src={plan_Standard} alt="plan" width="288" height="288" />
+					<script async src="https://js.stripe.com/v3/buy-button.js">
+					</script>
 
-				<stripe-buy-button
-					buy-button-id="buy_btn_1O5Ko4AIPjnW5yZ1LdZTGUDM"
-					publishable-key="pk_live_51O4Nt8AIPjnW5yZ1xpcThU3EhrRdaLkVHN9YDM0otNAgKHrVoUwdLyZD7BHzJ1FvsFm7QoG2L2nn8kpEz2bsKLV000CU0ShlND"
-				/>
+					<stripe-buy-button
+						buy-button-id="buy_btn_1O5Ko4AIPjnW5yZ1LdZTGUDM"
+						publishable-key="pk_live_51O4Nt8AIPjnW5yZ1xpcThU3EhrRdaLkVHN9YDM0otNAgKHrVoUwdLyZD7BHzJ1FvsFm7QoG2L2nn8kpEz2bsKLV000CU0ShlND"
+					/>
+				</div>
 			</div>
 		</div>
 		<h4>CMS Plan</h4>
@@ -92,43 +91,34 @@
 				<dt>内訳</dt>
 				<dd>
 					<ul>
-						<li>初期費用<b>￥100,000</b></li>
-						<li>
-							ドメインサービス（例 : Xserverドメイン）の<a
-								class="prices"
-								href="https://www.xdomain.ne.jp/"
-								target="_blank">利用料</a
-							>
-						</li>
-						<li>
-							ホスティングサービス（Cloudflare Pages）の<a
-								class="prices"
-								href="https://pages.cloudflare.com/#pricing"
-								target="_blank">利用料</a
-							>
-						</li>
-						<li>
-							CMSサービス（Spearly CMS）の<a
-								class="prices"
-								href="https://spearly.com/ja/cms/pricing"
-								target="_blank">利用料</a
-							>
-						</li>
+						<li>製作費<b>￥100,000</b>（初期費用）</li>
+						<li>ドメインサービスの利用料</li>
+						<li>ホスティングサービスの利用料（従量課金）</li>
+						<li>CMSサービスの利用料（月額費用）</li>
 					</ul>
 				</dd>
 				<dt>仕様</dt>
 				<dd>
-					基本となるA4サイズのページ（トップページやブログ一覧など）が５ページまでで、CMS機能が付いたプラン。
+					<ul>
+						<li>オリジナルデザイン</li>
+						<li>固定ページA4サイズ5ページまで</li>
+						<li>独自ドメイン</li>
+						<li>サーバーレス</li>
+						<li>ヘッドレスCMS</li>
+					</ul>
 				</dd>
 			</dl>
 			<div class="stripe">
-				<script async src="https://js.stripe.com/v3/buy-button.js">
-				</script>
+				<div class="catalog">
+					<img src={plan_CMS} alt="plan" width="288" height="288" />
+					<script async src="https://js.stripe.com/v3/buy-button.js">
+					</script>
 
-				<stripe-buy-button
-					buy-button-id="buy_btn_1O5gGSAIPjnW5yZ1wSW6KWxa"
-					publishable-key="pk_live_51O4Nt8AIPjnW5yZ1xpcThU3EhrRdaLkVHN9YDM0otNAgKHrVoUwdLyZD7BHzJ1FvsFm7QoG2L2nn8kpEz2bsKLV000CU0ShlND"
-				/>
+					<stripe-buy-button
+						buy-button-id="buy_btn_1O5gGSAIPjnW5yZ1wSW6KWxa"
+						publishable-key="pk_live_51O4Nt8AIPjnW5yZ1xpcThU3EhrRdaLkVHN9YDM0otNAgKHrVoUwdLyZD7BHzJ1FvsFm7QoG2L2nn8kpEz2bsKLV000CU0ShlND"
+					/>
+				</div>
 			</div>
 		</div>
 		<h4>EC Plan</h4>
@@ -141,54 +131,37 @@
 				<dt>内訳</dt>
 				<dd>
 					<ul>
-						<li>初期費用<b>￥300,000</b></li>
-						<li>
-							ドメインサービス（例 : Xserverドメイン）の<a
-								class="prices"
-								href="https://www.xdomain.ne.jp/"
-								target="_blank">利用料</a
-							>
-						</li>
-						<li>
-							ホスティングサービス（Cloudflare Pages）の<a
-								class="prices"
-								href="https://pages.cloudflare.com/#pricing"
-								target="_blank">利用料</a
-							>
-						</li>
-						<li>
-							CMSサービス（Spearly CMS）の<a
-								class="prices"
-								href="https://spearly.com/ja/cms/pricing"
-								target="_blank">利用料</a
-							>
-						</li>
-						<li>
-							決済サービス（Stripe）の<a
-								class="prices"
-								href="https://stripe.com/jp/pricing"
-								target="_blank">利用料</a
-							>
-						</li>
+						<li>製作費<b>￥300,000</b>（初期費用）</li>
+						<li>ドメインサービスの利用料</li>
+						<li>ホスティングサービスの利用料（従量課金）</li>
+						<li>CMSサービスの利用料（月額費用）</li>
+						<li>決済サービスの利用料（決済ごとの手数料）</li>
 					</ul>
 				</dd>
 				<dt>仕様</dt>
 				<dd>
-					基本となるA4サイズのページ（トップページやブログ一覧など）が５ページまでで、CMSとEC機能が付いたプラン。
+					<ul>
+						<li>オリジナルデザイン</li>
+						<li>固定ページA4サイズ5ページまで</li>
+						<li>独自ドメイン</li>
+						<li>サーバーレス</li>
+						<li>ヘッドレスCMS</li>
+						<li>オンライン決済</li>
+					</ul>
 				</dd>
 			</dl>
 			<div class="stripe">
-				<script async src="https://js.stripe.com/v3/buy-button.js">
-				</script>
+				<div class="catalog">
+					<img src={plan_EC} alt="plan" width="288" height="288" />
+					<script async src="https://js.stripe.com/v3/buy-button.js">
+					</script>
 
-				<stripe-buy-button
-					buy-button-id="buy_btn_1O6va2AIPjnW5yZ1N3wRK47m"
-					publishable-key="pk_live_51O4Nt8AIPjnW5yZ1xpcThU3EhrRdaLkVHN9YDM0otNAgKHrVoUwdLyZD7BHzJ1FvsFm7QoG2L2nn8kpEz2bsKLV000CU0ShlND"
-				/>
+					<stripe-buy-button
+						buy-button-id="buy_btn_1O6va2AIPjnW5yZ1N3wRK47m"
+						publishable-key="pk_live_51O4Nt8AIPjnW5yZ1xpcThU3EhrRdaLkVHN9YDM0otNAgKHrVoUwdLyZD7BHzJ1FvsFm7QoG2L2nn8kpEz2bsKLV000CU0ShlND"
+					/>
+				</div>
 			</div>
-		</div>
-		<div class="small_text">
-			<p>*価格は全て税込価格です。</p>
 		</div>
 	</section>
 </main>
@@ -198,6 +171,10 @@
 		border-top: solid 2px black;
 		border-bottom: solid 2px black;
 		padding-bottom: 1rem;
+	}
+	ol {
+		width: fit-content;
+		margin: auto;
 	}
 	.data {
 		display: grid;
@@ -212,10 +189,6 @@
 	.data dd:nth-of-type(2) {
 		font-size: 2rem;
 	}
-	.small_text {
-		font-size: small;
-		margin-bottom: 0;
-	}
 	.plan {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
@@ -226,12 +199,26 @@
 		place-content: center;
 		margin-left: 8px;
 	}
+	.catalog {
+		position: relative;
+	}
+	stripe-buy-button {
+		display: grid;
+		line-height: 1rem;
+		position: absolute;
+		bottom: 0;
+	}
 	@media (width <= 800px) {
 		.plan {
 			display: initial;
 		}
 		.stripe {
 			margin: 8px auto;
+		}
+	}
+	@media (width >= 1200px) {
+		.TopContents .image img {
+			max-height: 300px;
 		}
 	}
 </style>

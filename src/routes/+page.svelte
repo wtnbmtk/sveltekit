@@ -194,17 +194,20 @@
 </main>
 
 <style>
+	.contentsTop {
+		border-top: solid 2px black;
+		border-bottom: solid 2px black;
+		padding-bottom: 1rem;
+	}
 	.data {
 		display: grid;
 		grid-template-columns: 80px auto;
-		border-right: solid 1px black;
-		border-left: solid 1px black;
 	}
 	.data dt:nth-of-type(4) {
-		border-bottom: solid 1px black;
+		border-bottom: solid 2px black;
 	}
 	.data dd:nth-of-type(4) {
-		border-bottom: solid 1px black;
+		border-bottom: solid 2px black;
 	}
 	.data dd:nth-of-type(2) {
 		font-size: 2rem;

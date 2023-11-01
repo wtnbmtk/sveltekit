@@ -77,18 +77,15 @@
 	.data {
 		display: grid;
 		grid-template-columns: 120px auto;
-		border-right: solid 1px black;
-		border-left: solid 1px black;
-		margin: 8px 0;
 	}
 	.data .mail {
 		text-decoration: revert;
 		color: revert;
 	}
 	.data dt:nth-of-type(11) {
-		border-bottom: solid 1px black;
+		border-bottom: solid 2px black;
 	}
 	.data dd:nth-of-type(11) {
-		border-bottom: solid 1px black;
+		border-bottom: solid 2px black;
 	}
 </style>

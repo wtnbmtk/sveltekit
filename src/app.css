@@ -136,18 +136,22 @@ main {
 	width: fit-content;
 	margin: auto;
 }
+.data {
+	border-right: solid 2px black;
+	border-left: solid 2px black;
+}
 .data dt {
 	display: grid;
 	place-content: center;
 	padding: 8px;
-	border-top: solid 1px black;
+	border-top: solid 2px black;
 }
 .data dd {
 	display: grid;
 	place-content: center start;
 	padding: 8px;
-	border-top: solid 1px black;
-	border-left: solid 1px black;
+	border-top: solid 2px black;
+	border-left: solid 2px black;
 }
 
 .data span {
